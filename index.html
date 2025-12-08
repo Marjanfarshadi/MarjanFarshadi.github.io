@@ -1,38 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marjan Farshadi — Portfolio</title>
+
+  <!-- ===== Google Analytics 4 (if not already present on your repo) =====
+       Replace G-XXXXXXX with your GA4 Measurement ID or remove this block
+       if GA4 is already configured elsewhere in your site.
+  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHFWJ5PKHC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KHFWJ5PKHC');
+  </script>
+
+  <!-- ===== Styles: Soft Professional (Blue) ===== -->
+  <style>
    :root{
-      --bg:#eef2f7;        
-      --card:#ffffff;      
-      --accent:#1e3a5f;    
-      --accent-2:#365f8c;  
-      --muted:#54657a;     
-      --maxw:980px;
-    }
-
+  --bg:#eef2f7;        /* پس‌زمینه خیلی روشن با ته‌مایه آبی */
+  --card:#ffffff;      /* سفید برای کارت‌ها */
+  --accent:#1e3a5f;    /* رنگ اصلی: navy blue */
+  --accent-2:#365f8c;  /* آبی دوم روشن‌تر برای گرادینت‌ها / هایلایت */
+  --muted:#54657a;     /* رنگ متن‌های کمرنگ، ملایم و هماهنگ */
+  --maxw:980px;
+}
     *{box-sizing:border-box}
-    body{
-      font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
-      margin:0;
-      background:var(--bg);
-      color:#12202b;
-      -webkit-font-smoothing:antialiased;
-    }
-
-    /* ⭐⭐⭐ THIS WAS MISSING — MAIN HEADER BACKGROUND ⭐⭐⭐ */
-    header{
+    body{font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif; margin:0; background:var(--bg); color:#12202b; -webkit-font-smoothing:antialiased}
+  header{
       background:linear-gradient(90deg,var(--accent),var(--accent-2));
       color:white;
       padding:30px 20px;
       text-align:center;
     }
 
-    header h1{
-      color:white;
-    }
+     header h1 {
+  color: #ffffff;
+}
 
-    header .lead{
-      color:#f2f6ff;
-    }
+header .lead {
+  color: #f2f6ff;  /* سفید کمی ملایم، برای چشم بهتره */
+}
 
-    header nav a{
-      color:white !important;
-      font-weight:600;
-    }
+header nav a {
+  color: #ffffff !important;
+}
+
+    .container{max-width:var(--maxw); margin:30px auto; padding:0 18px}
+    h1{margin:0; font-size:28px; letter-spacing:0.4px}
+    nav{margin-top:10px}
+    nav a{color:rgba(255,255,255,0.95); text-decoration:none; margin:0 10px; font-weight:600; font-size:14px}
+    .hero{display:flex; gap:24px; align-items:center; justify-content:space-between; flex-wrap:wrap}
+    .hero-left{flex:1; min-width:260px}
+    .hero-right{width:120px; text-align:center}
+    .avatar{width:110px; height:110px; border-radius:12px; background:#fff; display:inline-block; box-shadow:0 6px 18px rgba(43,111,166,0.18); overflow:hidden}
+    .lead{color:#0f2330; margin:12px 0 0; font-size:16px}
+    section{background:var(--card); border-radius:12px; padding:24px; margin-bottom:20px; box-shadow:0 6px 20px rgba(12,26,36,0.05)}
+    h2{color:var(--accent); margin-top:0}
+    ul{padding-left:18px}
+    .project-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px}
+    .project{border-radius:10px; padding:14px; background:linear-gradient(180deg,#ffffff,#fbfeff); border:1px solid rgba(43,111,166,0.06)}
+    .skills-grid{display:flex; flex-wrap:wrap; gap:8px}
+    .skill{background:#eef7ff; color:var(--accent); padding:8px 10px; border-radius:8px; font-weight:600; font-size:13px}
+    .muted{color:var(--muted)}
+    footer{padding:18px; text-align:center; color:#fff; background:#0b2f4a; margin-top:14px; border-radius:6px}
+    .btn{display:inline-block; background:var(--accent); color:white; padding:10px 14px; border-radius:8px; text-decoration:none; font-weight:700}
+    @media(max-width:720px){ .hero{flex-direction:column; align-items:flex-start} .hero-right{width:100%} }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container hero">
+      <div class="hero-left">
+        <h1>Marjan Farshadi, MD</h1>
+        <div class="lead">MD • Healthcare Leadership Instructor • Clinical Research Professional • Data & Analytics (SQL, R, VBA, GA4)</div>
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+      <div class="hero-right">
+        <div class="avatar" aria-hidden="true">
+          <!-- Replace with an <img src="..." alt="Profile photo"> if you upload a photo -->
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="120" rx="12" fill="#ffffff"/>
+            <g transform="translate(12,12)" fill="#2b6fa6">
+              <circle cx="48" cy="28" r="20" opacity="0.95"/>
+              <rect x="6" y="64" width="84" height="20" rx="8"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <p>
+        I am a medical doctor with extensive experience in <strong>clinical research, healthcare education, and program coordination</strong>.
+        My work focuses on designing evidence-based programs, ensuring regulatory compliance (GCP/ICH), and improving patient outcomes through collaborative, data-driven strategies.
+        I combine medical training with strong analytical skills (SQL, R, VBA) and practical experience in digital analytics (GA4, GTM).
+      </p>
+      <p class="muted">Location: Toronto, ON, Canada • Email: <a href="mailto:marjanfarshadi@outlook.com">marjanfarshadi@outlook.com</a></p>
+    </section>
+
+    <section id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      <h3>Healthcare Leadership Instructor — TriOS / Sault College</h3>
+      <p class="muted">Aug 2023 – Dec 2024</p>
+      <ul>
+        <li>Delivered modules on project management, patient safety, and healthcare policy with focus on practical leadership skills.</li>
+        <li>Designed assessments and facilitated interactive student learning; consistently high satisfaction scores.</li>
+      </ul>
+
+      <h3>Lead Clinical Research Coordinator / Data Manager — Sunnybrook Hospital</h3>
+      <p class="muted">May 2022 – Apr 2024</p>
+      <ul>
+        <li>Coordinated multisite clinical trials, managed protocol compliance and GCP activities.</li>
+        <li>Led data collection, cleaning and analysis; prepared reports for REB and funders.</li>
+      </ul>
+
+      <h3>Project Implementation Consultant — Prostate Health Promotion (Matawa First Nations)</h3>
+      <p class="muted">Dec 2022 – Feb 2023</p>
+      <ul>
+        <li>Developed culturally adapted educational materials and led community workshops.</li>
+      </ul>
+
+      <!-- add more roles as needed -->
+    </section>
+
+    <section id="portfolio" aria-labelledby="portfolio-heading">
+      <h2 id="portfolio-heading">Selected Projects</h2>
+      <div class="project-grid">
+        <article class="project">
+          <h4>GA4 Practice Website</h4>
+          <p>Built and instrumented this personal portfolio site using GitHub Pages and Google Analytics 4 to practice event tracking, funnels, UTM campaigns, and reporting dashboards in Looker Studio.</p>
+          <p class="muted">Key skills: GA4, GTM, Looker Studio, UTM tracking</p>
+        </article>
+
+        <article class="project">
+          <h4>Multisite Clinical Trials — Sunnybrook</h4>
+          <p>Coordinated four multisite trials, managed data workflows, wrote protocols and REB submissions, and produced analysis-ready datasets for reporting.</p>
+          <p class="muted">Key skills: Clinical project management, data cleaning, REDCap</p>
+        </article>
+
+        <article class="project">
+          <h4>Healthcare Leadership Curriculum</h4>
+          <p>Designed interactive modules on leadership, patient safety and system navigation for college students; integrated case-based learning and assessments.</p>
+          <p class="muted">Key skills: Curriculum design, teaching evaluation</p>
+        </article>
+
+        <article class="project">
+          <h4>Community Health Promotion — Matawa First Nations</h4>
+          <p>Led needs assessments and culturally appropriate education for prostate health; engaged elders and local health workers to adapt materials.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills & Expertise</h2>
+
+      <h4>Technical Skills</h4>
+      <div class="skills-grid" style="margin-bottom:10px;">
+        <div class="skill">Google Analytics 4 (GA4)</div>
+        <div class="skill">Google Tag Manager (GTM)</div>
+        <div class="skill">Looker Studio</div>
+        <div class="skill">SQL</div>
+        <div class="skill">R</div>
+        <div class="skill">VBA</div>
+        <div class="skill">REDCap</div>
+        <div class="skill">Medidata Rave</div>
+        <div class="skill">Excel (Advanced) / Power BI</div>
+      </div>
+
+      <h4>Core Competencies</h4>
+      <ul>
+        <li>Clinical research coordination & GCP compliance</li>
+        <li>Healthcare leadership & teaching</li>
+        <li>Program design, needs assessment & evaluation</li>
+        <li>Stakeholder engagement & community health initiatives</li>
+      </ul>
+    </section>
+
+    <section id="publications" aria-labelledby="publications-heading">
+      <h2 id="publications-heading">Selected Publications</h2>
+      <ul>
+        <li><strong>Histological Characterization of Class I HLA…</strong> — Bioengineering (2023).</li>
+        <li><strong>Antimetastatic Effects of Curcumin…</strong> — Frontiers in Pharmacology (2021).</li>
+        <li><strong>Transient Elastography in Various Liver Disease Etiologies (CASTLE-TLC)…</strong> — Journal of Hepatology (2018).</li>
+        <!-- more can be added or link to full list -->
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>Email: <a href="mailto:marjanfarshadi@outlook.com">marjanfarshadi@outlook.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/marjanfarshadi/" target="_blank" rel="noopener">linkedin.com/in/marjanfarshadi</a></p>
+      <p>
+        <a class="btn" href="Marjan_Farshadi_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+        <!-- Upload Marjan_Farshadi_CV.pdf to repo or change filename above -->
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>&copy; 2025 Marjan Farshadi — MD. Prepared for professional use. Designed with a soft-blue theme.</small>
+    </div>
+  </footer>
+
+</body>
+</html>
